@@ -1,5 +1,7 @@
 $script = <<-SCRIPT
-echo I am provisioning...
+sudo apt-get update
+sudo apt-get install --assume-yes python-pip
+pip install flask
 SCRIPT
 
 Vagrant.configure("2") do |config|
