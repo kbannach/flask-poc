@@ -2,6 +2,10 @@ $script = <<-SCRIPT
 sudo apt-get update
 sudo apt-get install --assume-yes python-pip
 pip install flask
+export FLASK_APP=flaskr
+export FLASK_ENV=development
+# use this alias to start a flask application server with the access from the host machine
+alias frun="flask run --host=192.168.50.4"
 SCRIPT
 
 Vagrant.configure("2") do |config|
@@ -10,6 +14,8 @@ Vagrant.configure("2") do |config|
     v.memory = 1024
     v.cpus = 2
   end
+
+  config.vm.network "private_network", ip: "192.168.50.4"
   config.vm.synced_folder '.', '/workspace'
   config.vm.provision "shell", inline: $script
 end
