@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <h1>{% block title %}Demo Flask App{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+    <div>Starting point (Gdynia) coordinates: {{ startingPoint['lat'] }} x {{ startingPoint['lng'] }}</div>
+    <div>Endpoint (Gdansk) coordinates: {{ endPoint['lat'] }} x {{ endPoint['lng'] }}</div>
+    <div>Total distance: {{ totalDist }}</div>
+    <div>Total time: {{ totalTime }}</div>
+{% endblock %}

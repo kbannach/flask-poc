@@ -1,0 +1,7 @@
+class Config(object):
+    pass
+
+
+class DevelopmentConfig(Config):
+    # Google API key
+    GOOGLE_API_KEY = 'your API key'

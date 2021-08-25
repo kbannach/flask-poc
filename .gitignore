@@ -134,3 +134,6 @@ dmypy.json
 
 # Vagrant
 .vagrant
+
+# app config file
+/flaskr/config.py
