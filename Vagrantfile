@@ -3,9 +3,9 @@ sudo apt-get update
 sudo apt-get install --assume-yes python-pip
 pip install flask
 pip install -U googlemaps
-export FLASK_APP=flaskr
-export FLASK_ENV=development
-export APP_CONFIG_FILE=/workspace/flaskr/config.cfg
+echo "export FLASK_APP=flaskr" >> /home/vagrant/.profile
+echo "export FLASK_ENV=development" >> /home/vagrant/.profile
+echo "export APP_CONFIG_FILE=/workspace/flaskr/config.cfg" >> /home/vagrant/.profile
 # use this alias to start a flask application server with the access from the host machine
 alias frun='flask run --host=192.168.50.4' >> /home/vagrant/.bash_aliases
 echo "alias frun='flask run --host=192.168.50.4'" >> /home/vagrant/.bash_aliases
